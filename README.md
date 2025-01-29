@@ -8,6 +8,6 @@ git clone https://github.com/X74TEAM/PrigMan.git
 
 cd PrigMan
 
-python THANOS.py
+python PrigMan.py
 ```
 Enjoy 
