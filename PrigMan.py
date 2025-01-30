@@ -79,7 +79,7 @@ oks = []
 cps = []
 loop = 0
 url_lookup = "https://lookup-id.com/"
-url_mb = "https://mbasic.facebook.com"
+url_mb = "https://m.facebook.com"
 url_ip = "https://www.httpbin.org/ip"
 header_grup = {"user-agent": "Mozilla/5.0 (Linux; Android 10; SM-N960U) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.5790.166 Mobile Safari/537.36;]"}
 bulan_ttl = {"01": "January", "02": "February", "03": "March", "04": "April", "05": "May", "06": "June", "07": "July", "08": "Augustus", "09": "September", "10": "October", "11": "November", "12": "December"}
@@ -149,7 +149,7 @@ F = '\x1b[1;94m'
 G = '\x1b[1;95m'
 P = '\033[1;37m'
 def cek_apk(session,coki):
-	w=session.get("https://free.facebook.com/settings/apps/tabbed/?tab=active",cookies={"cookie":coki}).text
+	w=session.get("https://m.facebook.com/settings/apps/tabbed/?tab=active",cookies={"cookie":coki}).text
 	sop = BeautifulSoup(w,"html.parser")
 	x = sop.find("form",method="post")
 	game = [i.text for i in x.find_all("h3")]
