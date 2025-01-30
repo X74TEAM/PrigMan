@@ -273,28 +273,14 @@ def b(uid,pwx,tl):
             "email":uid,
             "pass":ps,
             "login":"Log In"}
-            header_freefb = {'authority': 'mbasic.facebook.com',
+            header_freefb = {'authority': 'm.facebook.com',
     'method': 'GET',
-    'path': '/login/device-based/login/async/',
-    'scheme': 'https',
-    'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
-    'accept-language': 'en-US,en-GB;q=0.9,en;q=0.8',
-    'cache-control': 'max-age=0',
-    'dpr': '2.5562500953674316',
-    'sec-ch-prefers-color-scheme': 'light',
-    'sec-ch-ua': '"Not_A Brand";v="8", "Chromium";v="120"',
-    'sec-ch-ua-full-version-list': '"Not_A Brand";v="8.0.0.0", "Chromium";v="120.0.6099.116"',
+    'sec-ch-ua': '"Not-A.Brand";v="99", "Chromium";v="124"',
+    'Referer': 'https://m.facebook.com/',
+    'Origin': 'https://m.facebook.com',
     'sec-ch-ua-mobile': '?1',
-    'sec-ch-ua-model': '"SM-N980F"',
-    'sec-ch-ua-platform': '"Android"',
-    'sec-ch-ua-platform-version': '"13.0.0"',
-    'sec-fetch-dest': 'document',
-    'sec-fetch-mode': 'navigate',
-    'sec-fetch-site': 'none',
-    'sec-fetch-user': '?1',
-    'upgrade-insecure-requests': '1',
-    'user-agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36',
-    'viewport-width': '980',}
+    'User-Agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36',
+    'sec-ch-ua-platform': '"Android"',}
             lo = session.post('https://p.facebook.com/login/device-based/regular/login/?refsrc',data=log_data,headers=header_freefb).text
             log_cookies=session.cookies.get_dict().keys()
             if 'c_user' in log_cookies:
